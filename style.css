@@ -1,0 +1,14 @@
+html{
+    background: url(img/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header {
+    border:  solid white 2px;
+}
+
+#Menu li{
+    list-style-type: none;
+    font-size: 20px;
+}
