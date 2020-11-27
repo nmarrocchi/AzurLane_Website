@@ -68,4 +68,16 @@
     </body>
 </html>
 
-<?php new PDO
+<?php
+
+try{
+
+    $BDD = new PDO('mysql:host=192.168.65.60; dbname=AzurLane; charset=utf8','AzurLane', 'azurlane');
+
+
+}catch(Exception $e){
+
+    echo "J'ai eu un problème erreur :".$e->getMessage();
+}
+
+?>
