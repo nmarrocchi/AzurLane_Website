@@ -8,6 +8,16 @@ html{
     background-repeat: no-repeat;
 }
 
+.Footer {
+    margin-top: 1%;
+    padding: 0.05% 0% 0.05% 0%;
+    text-align: center;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    bottom: 0px;
+}
+
 .Header, .menu{
 	display: inline-block;
 }
@@ -96,3 +106,8 @@ html{
     	padding: 0.2% 0% 0.2% 0%;
     	border: solid black 1px;
     }
+
+    .rarity {
+        background-image: linear-gradient(to right, #69FFAD, #7899F4 40%, #CC6D9D);
+    }
+    
