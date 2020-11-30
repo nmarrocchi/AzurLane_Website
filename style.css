@@ -110,4 +110,41 @@ html{
     .rarity {
         background-image: linear-gradient(to right, #69FFAD, #7899F4 40%, #CC6D9D);
     }
-    
+
+    .Characters_Infos{
+        border: solid green 2px;;
+        width: 500px;
+        height: 222px;
+        margin-bottom: 1%;
+    }
+
+    .Characters_Icon{
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size:12px;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 10px 10px 10px 10px;
+        border: solid #444 2px;
+        width: 144px;
+        height: 222px;
+    }
+
+.Character_Name{
+        background-color: #444;
+        border: solid transparent 1px;
+        height: 20px;
+        padding-top: 5px;
+    }
+
+    .Character{
+        background-image: url("img/Characters/Specialized\ Bulin\ Custom\ MKIII.png");
+        position: absolute;
+        width: 144px;
+        height: 192px
+    }
+
+    .Type{
+        position: absolute;
+        margin: 5px;
+    }
