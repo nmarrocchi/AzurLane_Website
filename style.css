@@ -32,8 +32,8 @@ html{
 }
 
 .contenu{
-	margin-right: 3%;
-	margin-left: 3%;
+	margin-right: 2%;
+	margin-left: 2%;
 	margin-top: 5%;
 }
 
@@ -113,9 +113,9 @@ html{
 
     .Characters_Infos{
         border: solid green 2px;;
-        width: 500px;
+        width: fit-content;
         height: 222px;
-        margin-bottom: 1%;
+        margin: 2%;
     }
 
     .Characters_Icon{
@@ -147,4 +147,19 @@ html{
     .Type{
         position: absolute;
         margin: 5px;
+    }
+    .Stats, .Characters_Icon{
+        display: inline-block;
+    }
+
+    .Stats{
+        float: right;
+        padding-top: 1%;
+        text-align: center;
+        border: solid #444 1px;
+    }
+
+    .Stats table{
+        background-color: transparent;
+        width: fit-content;
     }

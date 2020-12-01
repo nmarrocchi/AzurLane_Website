@@ -52,16 +52,74 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY '.$_POST["Order"].' '.$
 
      default: $Data["Rarity"] = 'None';
      }
+
+     switch($Data["Affiliation"]){
+        case Dragon_Empery: $Data["Affiliation"] = ' ';
+    break;
+        case Eagle_Union: $Data["Affiliation"] = ' ';
+    break;
+        case Iris_Libre: $Data["Affiliation"] = ' ';
+    break;
+        case Iron_Blood: $Data["Affiliation"] = ' ';
+    break;
+        case Northem_Parliament: $Data["Affiliation"] = ' ';
+    break;
+    case Royal_Navy: $Data["Affiliation"] = ' ';
+break;
+
+    default: $Data["Affiliation"] = 'None';
+    }
 ?>
 
             <div class="Characters_Infos">
 
                 <div class="Characters_Icon">
+
                     <div class="Character_Name"><?php echo $Data["ShipName"]; ?></div>
-                <div class="Character">
-                    <img class="Type" src="img/Type/<?php echo $Data["TypeOfShip"]; ?>.png">
-                    <!--<img class="Character" src="img/Characters/<?php echo $Data["ShipName"]; ?>.png">-->
-    </div>
+
+                    <div class="Character">
+                        <img class="Type" src="img/Type/<?php echo $Data["TypeOfShip"]; ?>.png">
+                    </div>
+
+                </div>
+
+                <div class="Stats">
+                    <table>
+                        <tr>
+                            <thead class="THead">
+                                <td class="h_ID">ID</td>
+                                <td class="h_ShipName">Ship Name</td>
+                                <td class="h_Rarity">Rarity</td>
+                                <td class="h_TypeOfShip">Type Of Ship</td>
+                                <td class="h_Affiliation">Affiliation</td>
+                            </thead>
+                        </tr>
+                        <tr>
+                            <td class="ID"><?php echo($ID) ?></td>
+                            <td class="ShipName"><?php echo $Data["ShipName"]; ?><p><img src="img/Characters/<?php echo $Data["ShipName"]; ?>.png"></p></td>
+                            <td class="Rarity"><?php echo $Data["Rarity"]; ?></td>
+                            <td class="TypeOfShip"><?php echo $Data["TypeOfShip"]; ?></td>
+                            <td class="Affiliation"><?php echo $Data["Affiliation"]; ?></td>
+                        </tr>
+                        <tr>
+                            <thead class="THead">
+                                <td class="h_Firepower">Firepower</td>
+                                <td class="h_Health">Health</td>
+                                <td class="h_AntiAir">Anti-Air</td>
+                                <td class="h_Evasion">Evasion</td>
+                                <td class="h_Aviation">Aviation</td>
+                                <td class="h_Torpedo">Torpedo</td>
+                            </thead>
+                        </tr>
+                        <tr>
+                            <td class="Firepower"><?php echo $Data["Firepower"]; ?></td>
+                            <td class="Health"><?php echo $Data["Health"]; ?></td>
+                            <td class="AntiAir"><?php echo $Data["AntiAir"]; ?></td>
+                            <td class="Evasion"><?php echo $Data["Evasion"]; ?></td>
+                            <td class="Aviation"><?php echo $Data["Aviation"]; ?></td>
+                            <td class="Torpedo"><?php echo $Data["Torpedo"]; ?></td>
+                        </tr>
+                    </table>
                 </div>
 
             </div>
