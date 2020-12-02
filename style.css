@@ -20,9 +20,8 @@ html{
 }
 
 .Contenu{
-    margin: auto;
-    padding: 3%;
-    align-items: center;
+    text-align: center;
+    padding: auto;
 }
 
 .Header, .menu{
@@ -90,12 +89,12 @@ html{
     /*  Div qui contient toutes les informations d'un personnages   */
     .Characters_Infos{
         display: inline-block;
-        margin: 2%;
-        width: min-content;
+        margin: 2% auto 2% auto;
     }
 
     /*  Divs qui contient le nom, l'image et l'icone du type du personnage. */
     .Characters_Icon{
+        margin: auto;
         text-align: center;
         border: solid #444 2px;
         border-radius: 10px 10px 10px 10px;
@@ -127,7 +126,7 @@ html{
 
     /*  Alignement des divs d'icone et de stats dans la Div globale   */
     .Characters_Stats, .Characters_Icon{
-        display: inline-block;
+       align-content: center;
     }
 
     /*  Div qui contient les stats du personnage */
@@ -142,7 +141,7 @@ html{
         padding: 0.5%;
         text-align: center;
         color: #eee;
-        margin: 2%;
+        margin: 2% auto 2% auto;
         border: solid #444 2px;
         border-radius: 10px 10px 0px 0px;
         overflow: hidden;

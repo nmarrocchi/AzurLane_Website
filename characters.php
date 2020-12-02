@@ -14,7 +14,7 @@
 
 $BDD = new PDO('mysql:host=192.168.65.60; dbname=azurlane; charset=utf8','AzurLane', 'azurlane');
 
-$Result = $BDD->query('SELECT * FROM characters ORDER BY Rarity DESC ');
+$Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
 
 }catch(Exception $e){
 
