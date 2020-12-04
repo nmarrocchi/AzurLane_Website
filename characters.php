@@ -31,21 +31,26 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
         <div class="Contenu">
 
 <?php
-
         $ID = 0;
+        $Rarity_Color = " ";
 
         while ( $Data = $Result->fetch() )   
  {  $ID++;
      switch($Data["Rarity"]){
          case 5: $Data["Rarity"] = 'Ultra Rare';
+                      $Rarity_Color = "style = 'Background-image: linear-gradient(to bottom right, #AFA 15%, #AAF, #FAA 85%);' ";
      break;
          case 4: $Data["Rarity"] = 'Super Rare';
+                      $Rarity_Color = "style = 'Background-color: PaleGoldenRod ;' ";
      break;
          case 3: $Data["Rarity"] = 'Elite';
+                      $Rarity_Color = "style = 'Background-color: Plum ;' ";
      break;
          case 2: $Data["Rarity"] = 'Rare';
+                      $Rarity_Color = "style = 'Background-color: PowderBlue ;' ";
      break;
          case 1: $Data["Rarity"] = 'Common';
+                      $Rarity_Color = "style = 'Background-color: Gainsboro ;' ";
      break;
 
      default: $Data["Rarity"] = 'None';
@@ -91,10 +96,10 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
 
                 <div class="Characters_Infos">
 
-                    <div class="Characters_Icon">
-                        <p><?php echo $Data["ShipName"]; ?></p>
+                    <div class="Characters_Icon" <?php echo $Rarity_Color; ?>>
+                        <p><a href="<?php echo $Data["ShipName"]; ?>.php" onclick="rename('CustomCharacter.php','<?php echo $Data['ShipName']; ?>.php')" ><?php echo $Data["ShipName"]; ?></p>
                         <img class="Characters_Type" src="img/Type/<?php echo $Data["TypeOfShip"]; ?>.png" alt="Type">
-                        <img class="Characters_Img" src="img/Characters/<?php echo $Data["ShipName"]; ?>.png" alt="Character">
+                        <img class="Characters_Img" src="img/Characters/<?php echo $Data["ShipName"]; ?>.png" alt="Character"></a>
                         
                     </div>
                     <div class="Characters_Stats">
@@ -102,9 +107,9 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
                         <table class="Basic_Values">
                             <tr>
                                 <thead class="THead">
-                                    <td class="h_Rarity">Rarity</td>
-                                    <td class="h_TypeOfShip">Type Of Ship</td>
-                                    <td class="h_Affiliation" colspan="3">Nationality</td>
+                                    <td class="h_Rarity"> Rarity </td>
+                                    <td class="h_TypeOfShip"> Type Of Ship </td>
+                                    <td class="h_Affiliation" colspan="3"> Nationality </td>
                                 </thead>
                             </tr>
                             <tr class="Values">
@@ -117,21 +122,21 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
                         <table class="Stats_Values">
                             <tr>
                                 <thead class="THead">
-                                    <td class="h_Firepower">Firepower</td>
-                                    <td class="h_Health">Health</td>
-                                    <td class="h_AntiAir">Anti-Air</td>
-                                    <td class="h_Evasion">Evasion</td>
-                                    <td class="h_Aviation">Aviation</td>
-                                    <td class="h_Torpedo">Torpedo</td>
+                                    <td class="h_Firepower"> Firepower </td>
+                                    <td class="h_Health"> Health </td>
+                                    <td class="h_AntiAir"> Anti-Air </td>
+                                    <td class="h_Evasion"> Evasion </td>
+                                    <td class="h_Aviation"> Aviation </td>
+                                    <td class="h_Torpedo"> Torpedo </td>
                                 </thead>
                             </tr>
                                 <tr class="Values">
-                                <td class="Firepower"><?php echo $Data["Firepower"]; ?></td>
-                                <td class="Health"><?php echo $Data["Health"]; ?></td>
-                                <td class="AntiAir"><?php echo $Data["AntiAir"]; ?></td>
-                                <td class="Evasion"><?php echo $Data["Evasion"]; ?></td>
-                                <td class="Aviation"><?php echo $Data["Aviation"]; ?></td>
-                                <td class="Torpedo"><?php echo $Data["Torpedo"]; ?></td>
+                                <td class="Firepower"><p><?php echo $Data["Firepower"]; ?></p></td>
+                                <td class="Health"><p><?php echo $Data["Health"]; ?></p></td>
+                                <td class="AntiAir"><p><?php echo $Data["AntiAir"]; ?></p></td>
+                                <td class="Evasion"><p><?php echo $Data["Evasion"]; ?></p></td>
+                                <td class="Aviation"><p><?php echo $Data["Aviation"]; ?></p></td>
+                                <td class="Torpedo"><p><?php echo $Data["Torpedo"]; ?></p></td>
                             </tr>
                         </table>
                     </div>
