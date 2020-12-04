@@ -1,5 +1,5 @@
 <div class="Header">
-            <img class="icon" src="img/Logo_2.png"alt=""> 
+            <img class="icon" src="img/Logo_2.png"alt=" "> 
 
             <ul class="menu">
 
