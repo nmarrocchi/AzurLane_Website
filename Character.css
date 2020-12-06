@@ -1,0 +1,61 @@
+.Character_Infos{
+    margin: 1% 40%;
+    padding: 0.5%;
+}
+
+/*  Divs qui contient le nom, l'image et l'icone du type du personnage. */
+.Character_Icon{
+    background-color: green;
+    text-align: center;
+    border: solid #444 2px;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    width: min-content;
+    height: min-content;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    align-content: center;
+}
+
+.Character_Icon p{
+    color: #eee;
+    padding: 7.5px 0px 7.5px 0px;
+    margin: 0px;
+    background-color: #444;
+}
+
+.Character_Info{
+    background-color: rgba(204,204,204,0.8158615496980042);
+}
+
+.Character_Info table{
+    display: table;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.Table_Infos, .Table_Infos_Type, .Table_Infos_Affiliation, .Table_Infos_Rarity{
+    font-weight: bold;
+    text-align: center;
+    border: solid black 1px;
+    width: 50%;
+}
+
+.Table_Infos_Type, .Table_Infos_Type p{
+    align-content: ju
+    ;
+}
+
+.Table_Infos_Affiliation, .Table_Infos_Affiliation p{
+    align-content: inherit;
+}
+
+.Table_Infos_Rarity, .Table_Infos_Rarity p{
+    align-content: inherit;
+}
+
+.Character_Type{
+    float: left;
+    margin: auto auto auto 2%;
+}

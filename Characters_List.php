@@ -10,9 +10,10 @@
 
     <?php
 
+
         try{
 
-$BDD = new PDO('mysql:host=192.168.65.60; dbname=azurlane; charset=utf8','AzurLane', 'azurlane');
+$BDD = new PDO('mysql:host=127.0.0.3; dbname=azurlane; charset=utf8','AzurLane', 'azurlane');
 
 $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
 
@@ -31,6 +32,7 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
         <div class="Contenu">
 
 <?php
+        $_GET['Shipname'] = " ";
         $ID = 0;
         $Rarity_Color = " ";
 
@@ -65,7 +67,7 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
     break;
         case 4: $Data["Affiliation"] = 'Iron Blood';
     break;
-        case 5: $Data["Affiliation"] = 'Northem Parliament ';
+        case 5: $Data["Affiliation"] = 'Northern Parliament';
     break;
         case 6: $Data["Affiliation"] = 'Royal Navy';
     break;
@@ -97,46 +99,46 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
                 <div class="Characters_Infos">
 
                     <div class="Characters_Icon" <?php echo $Rarity_Color; ?>>
-                        <p><a href="<?php echo $Data["ShipName"]; ?>.php" onclick="rename('CustomCharacter.php','<?php echo $Data['ShipName']; ?>.php')" ><?php echo $Data["ShipName"]; ?></p>
+                        <p><a href="Character.php?Shipname=<?php echo $_POST['Shipname']=$Data["ShipName"]; ?>"><?php echo $Data["ShipName"]; ?></p>
                         <img class="Characters_Type" src="img/Type/<?php echo $Data["TypeOfShip"]; ?>.png" alt="Type">
                         <img class="Characters_Img" src="img/Characters/<?php echo $Data["ShipName"]; ?>.png" alt="Character"></a>
                         
                     </div>
                     <div class="Characters_Stats">
 
-                        <table class="Basic_Values">
+                        <table class="Characters_Basic_Values">
                             <tr>
-                                <thead class="THead">
-                                    <td class="h_Rarity"> Rarity </td>
-                                    <td class="h_TypeOfShip"> Type Of Ship </td>
-                                    <td class="h_Affiliation" colspan="3"> Nationality </td>
+                                <thead class="Characters_THead">
+                                    <td class="Characters_h_Rarity"> Rarity </td>
+                                    <td class="Characters_h_TypeOfShip"> Type Of Ship </td>
+                                    <td class="Characters_h_Affiliation" colspan="3"> Nationality </td>
                                 </thead>
                             </tr>
-                            <tr class="Values">
-                                <td class="Rarity"><?php echo $Data["Rarity"]; ?></td>
-                                <td class="TypeOfShip"><?php echo $Data["TypeOfShip"]; ?></td>
-                                <td class="Affiliation" colspan="3"><img src="img/Affiliation/<?php echo $Data["Affiliation"]; ?>.png" alt="Affiliation"><p><?php echo $Data["Affiliation"]; ?></p></td>
+                            <tr class="Characters_Values">
+                                <td class="Characters_Rarity"><?php echo $Data["Rarity"]; ?></td>
+                                <td class="Characters_TypeOfShip"><?php echo $Data["TypeOfShip"]; ?></td>
+                                <td class="Characters_Affiliation" colspan="3"><img src="img/Affiliation/<?php echo $Data["Affiliation"]; ?>.png" alt="Affiliation"><p><?php echo $Data["Affiliation"]; ?></p></td>
                             </tr>
                         </table>
 
-                        <table class="Stats_Values">
+                        <table class="Characters_Stats_Values">
                             <tr>
-                                <thead class="THead">
-                                    <td class="h_Firepower"> Firepower </td>
-                                    <td class="h_Health"> Health </td>
-                                    <td class="h_AntiAir"> Anti-Air </td>
-                                    <td class="h_Evasion"> Evasion </td>
-                                    <td class="h_Aviation"> Aviation </td>
-                                    <td class="h_Torpedo"> Torpedo </td>
+                                <thead class="Characters_THead">
+                                    <td class="Characters_h_Firepower"> Firepower </td>
+                                    <td class="Characters_h_Health"> Health </td>
+                                    <td class="Characters_h_AntiAir"> Anti-Air </td>
+                                    <td class="Characters_h_Evasion"> Evasion </td>
+                                    <td class="Characters_h_Aviation"> Aviation </td>
+                                    <td class="Characters_h_Torpedo"> Torpedo </td>
                                 </thead>
                             </tr>
-                                <tr class="Values">
-                                <td class="Firepower"><p><?php echo $Data["Firepower"]; ?></p></td>
-                                <td class="Health"><p><?php echo $Data["Health"]; ?></p></td>
-                                <td class="AntiAir"><p><?php echo $Data["AntiAir"]; ?></p></td>
-                                <td class="Evasion"><p><?php echo $Data["Evasion"]; ?></p></td>
-                                <td class="Aviation"><p><?php echo $Data["Aviation"]; ?></p></td>
-                                <td class="Torpedo"><p><?php echo $Data["Torpedo"]; ?></p></td>
+                                <tr class="Characters_Values">
+                                <td class="Characters_Firepower"><p><?php echo $Data["Firepower"]; ?></p></td>
+                                <td class="Characters_Health"><p><?php echo $Data["Health"]; ?></p></td>
+                                <td class="Characters_AntiAir"><p><?php echo $Data["AntiAir"]; ?></p></td>
+                                <td class="Characters_Evasion"><p><?php echo $Data["Evasion"]; ?></p></td>
+                                <td class="Characters_Aviation"><p><?php echo $Data["Aviation"]; ?></p></td>
+                                <td class="Characters_Torpedo"><p><?php echo $Data["Torpedo"]; ?></p></td>
                             </tr>
                         </table>
                     </div>

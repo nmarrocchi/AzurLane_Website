@@ -163,12 +163,12 @@ a:active {color: #eee; text-decoration: none;}
         border-collapse: collapse;
     }
 
-    .Affiliation img, .Affiliation p{
+    .Characters_Affiliation img, .Characters_Affiliation p{
         display: inline-block;
         vertical-align: top;
     }
 
-    .Values td{
+    .Characters_Values td{
         color: black;
         background-color: #a2a9b1;
     }

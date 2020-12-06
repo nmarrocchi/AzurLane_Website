@@ -4,7 +4,7 @@
             <ul class="menu">
 
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="characters.php">Les personnages</a></li>
+                <li><a href="Characters_List.php">Les personnages</a></li>
                 <li><a href="factions.php">les factions</a></li>
                 <li><a href="story.php">l'histoire</a></li>
                 <li><a href="anime.php">l'adaptation animée</a></li>
