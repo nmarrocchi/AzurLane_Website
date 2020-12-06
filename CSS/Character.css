@@ -1,5 +1,6 @@
+/* Div comportant les divs d'informations du personnage */
 .Character_Infos{
-    margin: 1% 40%;
+    margin: 1% auto;
     padding: 0.5%;
 }
 
@@ -25,8 +26,9 @@
     background-color: #444;
 }
 
+/* Contient les infos principales du personnage */
 .Character_Info{
-    background-color: rgba(204,204,204,0.8158615496980042);
+    margin: 5% 35%;
 }
 
 .Character_Info table{
@@ -40,6 +42,7 @@
     text-align: center;
     border: solid black 1px;
     width: 50%;
+    background-color: rgba(204,204,204,0.8158615496980042);
 }
 
 .Table_Infos_Type, .Table_Infos_Type p{
@@ -58,4 +61,44 @@
 .Character_Type{
     float: left;
     margin: auto auto auto 2%;
+}
+
+/* Div contenant la table des stats du personnage */
+.Character_Stats{
+    width: auto;
+    margin: 2% 35%;
+}
+
+/* Table des stats */
+.Character_All_Stats{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Character_All_Stats td{
+    border: solid black 1px;
+}
+
+.Stats{
+    padding: 0.2% 1%;
+    background-color: #fff;
+}
+
+.Stats_img{
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #eaecf0;
+    text-align: center;
+}
+
+/* Petite Div qui indique le niveau max du personnages, suivi de ses stats */
+#Lv120{
+    padding: 1% 2%;
+    margin: auto;
+    width: max-content;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+    border: solid black 1px;
+    border-bottom: solid transparent 1px;
 }

@@ -1,0 +1,38 @@
+    /*  Div qui contient toutes les informations d'un personnages   */
+    .Characters_Infos{
+        padding: 1%;
+        display: inline-block;
+        margin: 1%;
+    }
+
+    /*  Divs qui contient l'image, le nom et le type du personnage. */
+    .Characters_Icon{
+        margin: auto;
+        text-align: center;
+        border: solid #444 2px;
+        border-radius: 10px 10px 10px 10px;
+        overflow: hidden;
+        width: max-content;
+        height: max-content;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    .Characters_Icon p{
+        color: #eee;
+        padding: 7.5px 0px 7.5px 0px;
+        margin: 0px;
+        background-color: #444;
+    }
+
+    .Characters_Img{
+        height: 226px;
+        width: 170px;
+    }
+
+    .Characters_Type{
+        float: left;
+        position: absolute;
+        margin: 5px;
+    }

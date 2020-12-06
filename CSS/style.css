@@ -1,0 +1,43 @@
+
+/* CSS principal des pages */
+body{
+	margin: 0%;
+}
+
+html{
+    background: url(../img/Background2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+a:link {color: #eee; text-decoration: none;}
+a:visited {color: #eee; text-decoration: none;}
+a:hover {color: #eee; text-decoration: underline;}
+a:active {color: #eee; text-decoration: none;}
+
+.Header{
+    text-align: center;
+    width: auto;
+}
+
+/* alignement du menu et de l'icone du header */
+
+.icon, .menu{display: inline-block;}
+.icon{float: left;}
+
+.Contenu{
+    text-align: center;
+    padding: auto;
+    margin: 3% auto auto auto;
+}
+
+.Footer {
+    margin-top: 1%;
+    padding: 0.05% 0% 0.05% 0%;
+    text-align: center;
+    width: 100%;
+    background-color: #000;
+    color: #eee;
+    bottom: 0px;
+}
