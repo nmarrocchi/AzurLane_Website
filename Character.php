@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/png" href="img/icon.png" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <link rel="stylesheet" type="text/css" href="Character.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/Character.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/menu.css" />
         <title>Azur Lane</title>
     </head>
 
@@ -94,15 +95,18 @@ $Result = $BDD->query("SELECT * FROM `characters` WHERE `Shipname` = '".$_GET['S
            default: $Data["Affiliation"] = 'None';
            }
 
+           switch($Data["Retrofit?"]){
+                case 0: $Data["Retrofit?"] = '';
+           break;
+                case 1: $Data["Retrofit?"] = ' - Retrofit';
+            break;
+
+            default: $Data["Retrofit?"] = '';
+           }
+
 ?>
 
             <div class="Character_Infos">
-
-                                <!--    <div class="Character_Icon">
-                                        <p>?php echo $Data["ShipName"]; ?></p>
-                                        <img class="Characters_Type" src="img/Type/<?php echo $Data["TypeOfShip"]; ?>.png" alt="Type">
-                                        <img class="Characters_Img" src="img/Characters/<?php echo $Data["ShipName"]; ?>.png" alt="Character"> 
-                                    </div> -->
 
                     <div class="Character_Info">
 
@@ -128,6 +132,47 @@ $Result = $BDD->query("SELECT * FROM `characters` WHERE `Shipname` = '".$_GET['S
                             <tr>
                                 <td class="Table_Infos"><p>Type of Ship : </p></td>
                                 <td class="Table_Infos_Type"><img class="Character_Type" src="img/Type/<?php echo $Data["TypeOfShip"]; ?>.png" alt="Type"><p><?php echo $Data["TypeOfShip"]; ?></p></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="Character_Stats">
+                        <div id="Lv120">Lv 120<?php echo $Data["Retrofit?"];?></div>
+                        <table class="Character_All_Stats">
+                            <tr>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Health.png" alt="Health"></td>
+                                <td class="Stats"><?php echo $Data["Health"]; ?></td>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Armor.png" alt="Armor"></td>
+                                <td class="Stats"><?php echo $Data["Armor"]; ?></td>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Reload.png" alt="Reload"></td>
+                                <td class="Stats"><?php echo $Data["Reload"]; ?></td>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Lucky.png" alt="Lucky"></td>
+                                <td class="Stats"><?php echo $Data["Lucky"]; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Firepower.png" alt="Firepower"></td>
+                                <td class="Stats"><?php echo $Data["Firepower"]; ?></td>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Torpedo.png" alt="Torpedo"></td>
+                                <td class="Stats"><?php echo $Data["Torpedo"]; ?></td>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Evasion.png" alt="Evasion"></td>
+                                <td class="Stats"><?php echo $Data["Evasion"]; ?></td>
+                                <td class="Stats_Img"><p>Speed</p></td>
+                                <td class="Stats"><?php echo $Data["Speed"]; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Anti-Air.png" alt="Anti-Air"></td>
+                                <td class="Stats"><?php echo $Data["Anti-Air"]; ?></td>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Aviation.png" alt="Aviation"></td>
+                                <td class="Stats"><?php echo $Data["Aviation"]; ?></td>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Oil_Cost.png" alt="Oil_Cost"></td>
+                                <td class="Stats"><?php echo $Data["Oil_Cost"]; ?></td>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Accuracy.png" alt="Accuracy"></td>
+                                <td class="Stats"><?php echo $Data["Accuracy"]; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/ASW.png" alt="Anti-Submarine Warfare"></td>
+                                <td class="Stats"><?php echo $Data["ASW"]; ?></td>
+                                <td class="Stats" colspan="6"><p>Listed stats are at 100 Affection and with maxed enhancements</p></td>
                             </tr>
                         </table>
                     </div>

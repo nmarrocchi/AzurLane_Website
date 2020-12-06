@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/png" href="img/icon.png" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/menu.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/Characters_List.css" />
         <title>Azur Lane - List of Ships</title>
     </head>
 
@@ -33,11 +35,10 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
 
 <?php
         $_GET['Shipname'] = " ";
-        $ID = 0;
         $Rarity_Color = " ";
 
         while ( $Data = $Result->fetch() )   
- {  $ID++;
+ {  
      switch($Data["Rarity"]){
          case 5: $Data["Rarity"] = 'Ultra Rare';
                       $Rarity_Color = "style = 'Background-image: linear-gradient(to bottom right, #AFA 15%, #AAF, #FAA 85%);' ";
@@ -103,44 +104,6 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
                         <img class="Characters_Type" src="img/Type/<?php echo $Data["TypeOfShip"]; ?>.png" alt="Type">
                         <img class="Characters_Img" src="img/Characters/<?php echo $Data["ShipName"]; ?>.png" alt="Character"></a>
                         
-                    </div>
-                    <div class="Characters_Stats">
-
-                        <table class="Characters_Basic_Values">
-                            <tr>
-                                <thead class="Characters_THead">
-                                    <td class="Characters_h_Rarity"> Rarity </td>
-                                    <td class="Characters_h_TypeOfShip"> Type Of Ship </td>
-                                    <td class="Characters_h_Affiliation" colspan="3"> Nationality </td>
-                                </thead>
-                            </tr>
-                            <tr class="Characters_Values">
-                                <td class="Characters_Rarity"><?php echo $Data["Rarity"]; ?></td>
-                                <td class="Characters_TypeOfShip"><?php echo $Data["TypeOfShip"]; ?></td>
-                                <td class="Characters_Affiliation" colspan="3"><img src="img/Affiliation/<?php echo $Data["Affiliation"]; ?>.png" alt="Affiliation"><p><?php echo $Data["Affiliation"]; ?></p></td>
-                            </tr>
-                        </table>
-
-                        <table class="Characters_Stats_Values">
-                            <tr>
-                                <thead class="Characters_THead">
-                                    <td class="Characters_h_Firepower"> Firepower </td>
-                                    <td class="Characters_h_Health"> Health </td>
-                                    <td class="Characters_h_AntiAir"> Anti-Air </td>
-                                    <td class="Characters_h_Evasion"> Evasion </td>
-                                    <td class="Characters_h_Aviation"> Aviation </td>
-                                    <td class="Characters_h_Torpedo"> Torpedo </td>
-                                </thead>
-                            </tr>
-                                <tr class="Characters_Values">
-                                <td class="Characters_Firepower"><p><?php echo $Data["Firepower"]; ?></p></td>
-                                <td class="Characters_Health"><p><?php echo $Data["Health"]; ?></p></td>
-                                <td class="Characters_AntiAir"><p><?php echo $Data["AntiAir"]; ?></p></td>
-                                <td class="Characters_Evasion"><p><?php echo $Data["Evasion"]; ?></p></td>
-                                <td class="Characters_Aviation"><p><?php echo $Data["Aviation"]; ?></p></td>
-                                <td class="Characters_Torpedo"><p><?php echo $Data["Torpedo"]; ?></p></td>
-                            </tr>
-                        </table>
                     </div>
 
                 </div>

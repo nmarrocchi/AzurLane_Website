@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/png" href="img/icon.png" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/menu.css" />
         <title>Azur Lane</title>
     </head>
 
