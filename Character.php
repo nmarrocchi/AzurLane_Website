@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/style.css" />
         <link rel="stylesheet" type="text/css" href="CSS/Character.css" />
         <link rel="stylesheet" type="text/css" href="CSS/menu.css" />
+
         <title>Azur Lane</title>
     </head>
 
@@ -156,7 +157,7 @@ $Result = $BDD->query("SELECT * FROM `characters` WHERE `Shipname` = '".$_GET['S
                                 <td class="Stats"><?php echo $Data["Torpedo"]; ?></td>
                                 <td class="Stats_Img"><img src="img/Stats_Icon/Evasion.png" alt="Evasion"></td>
                                 <td class="Stats"><?php echo $Data["Evasion"]; ?></td>
-                                <td class="Stats_Img"><p>Speed</p></td>
+                                <td class="Stats_Img"><img src="img/Stats_Icon/Evasion.png" alt="Evasion"></td>
                                 <td class="Stats"><?php echo $Data["Speed"]; ?></td>
                             </tr>
                             <tr>
@@ -172,7 +173,7 @@ $Result = $BDD->query("SELECT * FROM `characters` WHERE `Shipname` = '".$_GET['S
                             <tr>
                                 <td class="Stats_Img"><img src="img/Stats_Icon/ASW.png" alt="Anti-Submarine Warfare"></td>
                                 <td class="Stats"><?php echo $Data["ASW"]; ?></td>
-                                <td class="Stats" colspan="6"><p>Listed stats are at 100 Affection and with maxed enhancements</p></td>
+                                <td class="Stats" colspan="6">Listed stats are at 100 Affection and with maxed enhancements</td>
                             </tr>
                         </table>
                     </div>
