@@ -11,13 +11,17 @@
 
 
     <?php
+if(!isset($_POST['OrderCategory']))
+$_POST['OrderCategory'] = "Name";
 
+if(!isset( $_POST['OrderType']))
+$_POST['OrderType'] = "ASC";
 
         try{
 
 $BDD = new PDO('mysql:host=127.0.0.3; dbname=azurlane; charset=utf8','AzurLane', 'azurlane');
 
-$Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
+$Result = $BDD->query("SELECT * FROM characters ORDER BY Shipname ASC");
 
 }catch(Exception $e){
 
@@ -32,6 +36,7 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
         <?php include("Header.php"); ?>
 
         <div class="Contenu">
+
 
 <?php
         $_GET['Shipname'] = " ";
@@ -96,6 +101,8 @@ $Result = $BDD->query('SELECT * FROM characters ORDER BY ShipName ASC ');
     default: $Data["Affiliation"] = 'None';
     }
 ?>
+
+
 
                 <div class="Characters_Infos">
 
